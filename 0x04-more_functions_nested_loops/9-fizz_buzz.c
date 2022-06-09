@@ -18,11 +18,11 @@ int main(void)
 	{
 		if (b % 3 == 0 && b % 5)
 		{
-			printf("FizzBuzz");
+			printf("Fizz");
 		}
 		else if (b % 3 == 0)
 		{
-			printf("Fizz");
+			printf("FizzBuzz");
 		}
 		else if (b % 5 == 0)
 		{
