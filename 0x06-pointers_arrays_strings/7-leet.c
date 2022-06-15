@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * leet - encodes a string
+ * leet - encodes a string into 1337
  * Description - a function that encodes a string
  * @s: string to be encoded
  * use 'if' only once
@@ -13,16 +13,16 @@
 char *leet(char *s)
 {
 	int b, c;
-	char *d = "aAeEoOtTlL";
-	char *e = "4433007711";
+	char string1[] = "aAeEoOtTlL";
+	char string2[] = "4433007711";
 
 	for (b = 0; s[b] != '\0'; b++)
 	{
 		for (c = 0; c < 10; c++)
 		{
-			if (s[b] == d[c])
+			if (s[b] == string1[c])
 			{
-				s[b] = e[c];
+				s[b] = string2[c];
 			}
 		}
 	}
