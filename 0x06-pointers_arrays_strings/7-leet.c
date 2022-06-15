@@ -3,11 +3,8 @@
 /**
  * leet - encodes a string into 1337
  * Description - a function that encodes a string
- * @s: string to be encoded
- * use 'if' only once
- * use only two loops
- * switch and any ternary operation is not allowed
- * Return: string
+ * @s: input value
+ * Return: s
 */
 
 char *leet(char *s)
