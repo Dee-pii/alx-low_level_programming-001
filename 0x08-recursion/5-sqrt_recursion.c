@@ -1,44 +1,47 @@
 #include "main.h"
 
 /**
- * _comp - computes the function sqrt to find sq root
- * Description - compute the func sqrt to find sq root
- * @o: int
+ * _comp - computes square root
+ * Description - a function that computes sq root
+ * @first: inital number
+ * @last: last number
  * @n: int given
- * Return: to comp sq root
+ * Return: 1 if not found sqrroot, else sqrroot
 */
 
-int _comp(int o, int n)
+int _comp(int first, int last, int n)
 {
-	int sq_root;
+	long num;
 
-	sq_root = o * o;
+	if (last >= first)
+	{
 
-	if (sq_root == n)
-	{
-	return (o);
-	}
-	else if (sq_root < n)
-	{
-		return (_comp(n, ++o));
-				}
-				return (-1);
+		num = first + (last - first) / 2;
+
+		if (num * num == n)
+
+			return (num);
+
+		else if (num * num > n)
+			return (_comp(first, num - 1, n));
+
+		else if (num * num < n)
+			return (_comp(num + 1, last, n));
+		}
+		return (-1);
 }
-
 /**
- * _sqrt_recursion - return the natural sq root
- * Description - a function that returns the natural sq root
- * @n: int
- * Return: natural sq root
+ * _sqrt_recursion - returns the natural sq root
+ * @n: int given
+ * Return: square root of n or -1
 */
 
 int _sqrt_recursion(int n)
 {
-	if (n == 0 || n == 1)
-		return (n);
-
 	if (n < 0)
 		return (-1);
 
-	return (_comp(n, n));
+	if (n == 0 || n == 1)
+		return (n);
+	return (_comp(2, n, n));
 }
